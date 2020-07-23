@@ -1,7 +1,7 @@
-# Custom nginx docker image
-This is a custom docker image based on the latest official nginx alpine image. Image contains changed UID and GID for nginx user and group to match UID and GID of www-data user and group on php-fpm official image. These changes lets you share volumes data between nginx and php-fpm containers without possible permission issues.
+# Custom jenkins docker image
+This is a custom docker image based on the latest official jenkins lts image. Image contains added group "docker" and user "jenkins" was added to this group to solve docker access permission issues when running jenkins container on docker host.
 ## Usage
 Pull the image from docker hub:
 ```
-docker pull hitmanx/nginx-alpine
+docker pull hitmanx/jenkins
 ```
